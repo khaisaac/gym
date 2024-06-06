@@ -6,11 +6,11 @@ if (isset($_REQUEST["submit"])) {
     $id = $_REQUEST["id"];
     $name = $_REQUEST["name"];
     $date = $_REQUEST["date"];
-    $amount = $_REQUEST["amount"];
+    $experience = $_REQUEST["experience"];
 
     
 
-    $ins = "INSERT INTO billing (id,name, date,amount) VALUES ('$id','$name','$date','$amount')";
+    $ins = "INSERT INTO trainergym (id,name, date,experience) VALUES ('$id','$name','$date','$experience')";
         $query1 = mysqli_query($connection, $ins);
 }
 ?>
@@ -21,7 +21,7 @@ if (isset($_REQUEST["submit"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Billing - Khai Makhacev Gym</title>
+    <title>Trainer Gym - Khai Makhacev Gym</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -36,19 +36,16 @@ if (isset($_REQUEST["submit"])) {
         <a class="nav-link" href="#">Gym Mananagement System</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="coach.php">Coach</a>
+        <a class="nav-link" href="trainergym.php">Trainer Gym</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="members.php">Members</a>
+        <a class="nav-link" href="membermuaythai.php">Member Muay Thai</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="membership.php">Membership</a>
+        <a class="nav-link" href="members.php">Member Gym</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="receptionist.php">Receptionist</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="biling.php">Billing</a>
+        <a class="nav-link" href="muaythai.php">Coach Muay Thai</a>
       </li>
     </ul>
   </div>
@@ -58,23 +55,23 @@ if (isset($_REQUEST["submit"])) {
 
 <!-- form start -->
 <form>
-  <div class="form-row">
+<div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Member ID</label>
+      <label for="inputEmail4"> ID</label>
       <input type="text" name="id" class="form-control" id="inputEmail4" placeholder="ID">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">Member Name</label>
+      <label for="inputPassword4"> Name</label>
       <input type="text" name="name" class="form-control" id="inputPassword4" placeholder="Name">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress">Billing Date</label>
-    <input type="text" name="date" class="form-control" id="inputAddress" placeholder="">
+    <label for="inputAddress">Date of Birth</label>
+    <input type="text" name="date" class="form-control" id="inputAddress" placeholder="Date of Birth">
   </div>
   <div class="form-group">
-    <label for="inputAddress2">Amount</label>
-    <input type="text" name="amount"class="form-control" id="inputAddress2" placeholder="Amount">
+    <label for="inputAddress2">Experience</label>
+    <input type="text" name="experience" class="form-control" id="inputAddress2" placeholder="Experience">
   </div>
   <button type="submit"  name= "submit" class="btn btn-primary">Save</button>
 </form>

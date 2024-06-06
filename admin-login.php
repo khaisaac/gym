@@ -160,7 +160,7 @@ if (isset($_POST ["submit"])){
 			<div class="left">
 				<div class="top_link"><a href="index.html"><img src="https://drive.google.com/u/0/uc?id=16U__U5dJdaTfNGobB_OpwAJ73vM50rPV&export=download" alt="">Return home</a></div>
 				<div class="contact">
-					<form action="billing.php" method="post">
+					<form action="members.php" method="post">
 						<h3>SIGN IN</h3>
 						<input type="text" name="user"placeholder="USERNAME">
 						<input type="text" name ="pass"placeholder="PASSWORD">

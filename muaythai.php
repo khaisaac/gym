@@ -6,12 +6,11 @@ if (isset($_REQUEST["submit"])) {
     $id = $_REQUEST["id"];
     $name = $_REQUEST["name"];
     $date = $_REQUEST["date"];
-    $address = $_REQUEST["address"];
-    $phone = $_REQUEST["phone"];
+    $experience = $_REQUEST["experience"];
 
     
 
-    $ins = "INSERT INTO receptionist (id,name, date,address,phone) VALUES ('$id','$name','$date','$address','$phone')";
+    $ins = "INSERT INTO muaythai (id,name, date,experience) VALUES ('$id','$name','$date','$experience')";
         $query1 = mysqli_query($connection, $ins);
 
 }       
@@ -24,7 +23,7 @@ if (isset($_REQUEST["submit"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Receptionist</title>
+    <title>Coach of Muay Thai</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
 <body>
@@ -43,16 +42,16 @@ if (isset($_REQUEST["submit"])) {
         <a class="nav-link" href="#">Gym Management System</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="Billing.php">Billing</a>
+        <a class="nav-link" href="trainergym.php">Trainer Gym</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="Coach.php">Coach</a>
+        <a class="nav-link" href="membermuaythai.php">Member Muay Thai</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="members.php">Member</a>
+        <a class="nav-link" href="members.php">Member Gym</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="Receptionist.php">Receptionist</a>
+        <a class="nav-link" href="muaythai.php">Coach Muay Thai</a>
       </li>
     </ul>
   </div>
@@ -65,7 +64,7 @@ if (isset($_REQUEST["submit"])) {
 
 <!-- form start -->
 <form>
-  <div class="form-row">
+<div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4"> ID</label>
       <input type="text" name="id" class="form-control" id="inputEmail4" placeholder="ID">
@@ -76,16 +75,12 @@ if (isset($_REQUEST["submit"])) {
     </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress">Date of Birth</label>
-    <input type="text" name="date" class="form-control" id="inputAddress" placeholder="">
+    <label for="inputAddress">Date of Joining</label>
+    <input type="text" name="date" class="form-control" id="inputAddress" placeholder="Date of Joining">
   </div>
   <div class="form-group">
-    <label for="inputAddress2">Address</label>
-    <input type="text" name="address"class="form-control" id="inputAddress2" placeholder="Address">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Phone</label>
-    <input type="text" name="phone"class="form-control" id="inputAddress2" placeholder="Phone">
+    <label for="inputAddress2">Experience</label>
+    <input type="text" name="experience" class="form-control" id="inputAddress2" placeholder="Experience">
   </div>
   
   <button type="submit"  name= "submit" class="btn btn-primary">Save</button>

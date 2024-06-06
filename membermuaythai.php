@@ -8,11 +8,11 @@ if (isset($_REQUEST["submit"])) {
     $name = $_REQUEST["name"];
     $date = $_REQUEST["date"];
     $phone = $_REQUEST["phone"];
-    $trainer = $_REQUEST["trainer"];
+    $coach = $_REQUEST["coach"];
     $program = $_REQUEST["program"];
     
 
-    $ins = "INSERT INTO member (id,name, date,phone,trainer,program) VALUES ('$id','$name','$date','$phone','$trainer','$program')";
+    $ins = "INSERT INTO membermuaythai (id,name, date,phone,coach,program) VALUES ('$id','$name','$date','$phone','$coach','$program')";
         $query1 = mysqli_query($connection, $ins);
 }
 
@@ -23,7 +23,7 @@ if (isset($_REQUEST["submit"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Member Gym</title>
+    <title>Member Muay Thai</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -80,8 +80,8 @@ if (isset($_REQUEST["submit"])) {
     <input type="text" name="phone" class="form-control" id="inputAddress2" placeholder="phone">
   </div>
   <div class="form-group">
-    <label for="inputAddress2">Trainer Gym</label>
-    <input type="text" name="trainer" class="form-control" id="inputAddress2" placeholder="Trainer Gym">
+    <label for="inputAddress2">Coach Muay Thai</label>
+    <input type="text" name="coach" class="form-control" id="inputAddress2" placeholder="Trainer Gym">
   </div>
   <div class="mb-3">
       <label for="disabledSelect" class="form-label">Select Program</label>
